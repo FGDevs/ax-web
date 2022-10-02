@@ -1,0 +1,86 @@
+.layout {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 2rem;
+
+  .sidenav {
+    padding: 1.5rem 0;
+
+    &__head {
+      @include centerize;
+      flex-direction: column;
+
+      .logo {
+        height: 3rem;
+      }
+      .name {
+        margin-top: 0.5rem;
+      }
+      .slogan {
+        font-size: 0.5rem;
+        font-weight: 300;
+      }
+    }
+
+    &__nav {
+      margin-top: 2rem;
+
+      .route {
+        @include centerize(unset);
+        position: relative;
+        padding: 0.675rem 0.5rem 0.675rem 2rem;
+        color: $color-blue800;
+        text-decoration: none;
+        font-size: 0.875rem;
+        line-height: 1;
+
+        p {
+          margin-left: 0.5rem;
+        }
+
+        &.active {
+          color: #fff;
+
+          &::before {
+            content: "";
+            position: absolute;
+            border-radius: 0 4px 4px 0;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 8px;
+            background-color: $color-primary;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            border-radius: 0 1rem 1rem 0;
+            top: 0;
+            left: 0.75rem;
+            bottom: 0;
+            width: 100%;
+            background-color: $color-blue800;
+            z-index: -1;
+          }
+          .accent {
+            background-color: $color-primary;
+          }
+        }
+      }
+    }
+  }
+
+  .content {
+    padding: 1rem;
+
+    .coming {
+      @include centerize;
+      height: 100%;
+      border-radius: 1rem;
+      border: 1px solid #e0e3ea;
+      color: #999;
+    }
+  }
+}

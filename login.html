@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/login.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Login | Abang Express</title>
+</head>
+<body>
+  <main class="login">
+    <section class="login__brand" >
+      <img src="/assets/image/logo/ax.png" alt=""  />
+      <h1>Abang <strong>Express</strong></h1>
+      <p>Exspor Impor Jadi Lebih Mudah</p>
+    </section>
+
+    <section class="login__form">
+      <h1>Login</h1>
+      <div id="field-email" class="field" >
+        <div style="position: relative">
+          <label for="email">Email</label>
+          <input id="field-email-input" name="email" type="email" placeholder="Email" />
+        </div>
+        <p id="email-error" class="error">asdasd</p>
+      </div>
+      <div id="field-password" class="field">
+        <div style="position: relative">
+          <label for="password">Kata Sandi</label>
+          <input id="field-password-input" name="password" type="password" placeholder="Kata Sandi" />
+          <button id="field-password-toggle">
+            <p id="field-password-icon" class="micon">visibility_off</p>
+          </button>
+        </div>
+        <p id="password-error" class="error">asdasd</p>
+      </div>
+      <button id="login-submit">Login</button>
+    </section>
+  </main>
+
+  <script
+  src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
+  integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA="
+  crossorigin="anonymous"></script>
+  <script src="/assets/js/login.js"></script>
+  <script src="/assets/js/utilities/validationUtilities.js"></script>
+</body>
+</html>

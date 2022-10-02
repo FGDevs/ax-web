@@ -1,0 +1,106 @@
+@import "./base";
+@import "./mixins";
+
+body {
+  background-color: $color-gray100;
+}
+
+.login {
+  @include centerize(center);
+  height: 100vh;
+
+  &__brand {
+    @include centerize;
+    flex-direction: column;
+    font-family: "Noto Sans Ethiopic", sans-serif;
+    padding: 0 5rem;
+
+    img {
+      height: 100px;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 400;
+      width: fit-content;
+      letter-spacing: -0.5px;
+      white-space: nowrap;
+      strong {
+        font-weight: 700;
+      }
+    }
+    p {
+      font-size: 1.245rem;
+      font-weight: 300;
+      white-space: nowrap;
+    }
+  }
+
+  &__form {
+    h1 {
+      text-align: center;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+    .field {
+      position: relative;
+      width: 300px;
+      &:not(:first-of-type) {
+        margin-top: 1rem;
+      }
+
+      label {
+        font-size: 0.875rem;
+        font-weight: 400;
+      }
+      input {
+        border: none;
+        border-radius: 0.5rem;
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+        width: 100%;
+        font-family: "Poppins", sans-serif;
+
+        &::placeholder {
+          font-family: "Poppins", sans-serif;
+          font-size: 0.875rem;
+        }
+      }
+      button#field-password-toggle {
+        position: absolute;
+        bottom: 0.25rem;
+        right: 0.5rem;
+        p {
+          font-size: 1.25rem;
+          color: $color-gray500;
+        }
+      }
+      p.error {
+        font-size: 0.75rem;
+        color: $color-primary;
+        max-height: 0;
+        overflow: hidden;
+      }
+
+      &.error {
+        p.error {
+          margin-top: 0.5rem;
+          max-height: 500px;
+        }
+      }
+    }
+    button#login-submit {
+      color: #fff;
+      width: 100%;
+      padding: 0.5rem 1rem;
+      border-radius: 0.75rem;
+      margin-top: 1.5rem;
+      background-color: $color-primary;
+
+      &:disabled {
+        background-color: $color-gray200;
+        color: $color-gray500;
+      }
+    }
+  }
+}
